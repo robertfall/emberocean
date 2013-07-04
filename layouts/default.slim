@@ -11,17 +11,15 @@ html
     nav
       ul.main-nav
         li
-          a href='#home' Home
+          a class='selected' href='#home' Home
         li
-          a href='#' Biography
+          a href='#' data-page='bio' Biography
         li
           a href='#art' Art
         li
-          a class='selected' href='#' School
+          a data-page='school' href='#' School
         li
           a href='#' Furniture
-        li
-          a href='#' Marketing
         li
           a href='#renovations' Renovations
         li
@@ -29,7 +27,7 @@ html
         li
           a href='#' News
         li
-          a href='#' Contact
+          a href='#' data-page='contact' Contact
     #home.main-bg
     .main-wrapper
       == yield

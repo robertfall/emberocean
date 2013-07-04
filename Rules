@@ -13,6 +13,8 @@ compile '*' do
       layout 'default'
     when 'scss'
       filter :sass, syntax: :scss
+    when 'coffee'
+      filter :coffeescript
     end
   end
 end
