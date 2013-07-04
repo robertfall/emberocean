@@ -1,0 +1,217 @@
+@import "reset.scss";
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('../fonts/BebasNeue-webfont.eot');
+  src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/BebasNeue-webfont.woff') format('woff'),
+  url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+  url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-nav {
+  list-style: none;
+  position: fixed;
+  top:100px;
+  font-size: 16px;
+  font-family: Century Gothic, sans-serif;
+  font-weight: 200;
+  float: left;
+  z-index: 10;
+}
+
+.main-nav li {
+  margin: 5px 0;
+}
+
+.main-nav a {
+  font-family: "BebasNeueRegular";
+  box-sizing: border-box;
+  min-width: 150px;
+  display: block;
+  color: white;
+  padding: 3px 5px;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px
+}
+
+.main-nav a:hover {
+  background: rgba(200,200,200,0.8);
+}
+
+.main-nav a.selected {
+  color: white;
+  text-shadow: none;
+  border-right: 3px solid #AAA;
+}
+
+.main-bg {
+  height: 1000px;
+  width: 100%;
+  background:url('../images/background.jpg') no-repeat center center;
+  min-height:100%;
+  -webkit-background-size: cover;
+  background-size:cover;
+  position: fixed;
+}
+
+.main-wrapper {
+  position:relative;
+  height: 100%;
+}
+
+.panel {
+  position: absolute;
+  left: -1000px;
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  box-sizing: border-box;
+  padding-left: 160px;
+  border-right: 5px solid black;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  min-height:100%;
+}
+
+.panel.visible {
+  -webkit-transform: translate3d(1000px, 0px, 0px);
+  -moz-transform: translate3d(1000px, 0px, 0px);
+  -o-transform: translate3d(1000px, 0px, 0px);
+  -ms-transform: translate3d(1000px, 0px, 0px);
+  transform: translate3d(1000px, 0px, 0px);
+}
+
+.panel-header {
+  color: white;
+  padding: 10px 0;
+  font-family: "BebasNeueRegular";
+  font-size: 40px;
+  border-bottom: 2px dashed white;
+}
+
+.panel-body {
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+}
+
+.renovations {
+  background:url('../images/renovations.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  background-size:cover;
+}
+
+.art {
+  background: black;
+}
+
+
+.panel-body p {
+  padding: 10px 0;
+  font-family: "Aleo";
+  font-weight: 100;
+  text-align: justify;
+  color: #DDD;
+}
+
+.panel-thumbs {
+}
+
+.panel-thumbs li{
+  float:left;
+  margin:5px;
+}
+
+.panel-thumbs li div {
+  position:absolute;
+  top:5px;
+  width:180px;
+  padding:0px 10px;
+  display:none;
+  color:#fff;
+  z-index:100;
+}
+
+.panel-thumbs li div h2 {
+  font-family: 'Wire One', arial, serif;
+  font-size:38px;
+  text-transform:uppercase;
+  text-shadow:0px 0px 1px #fff;
+}
+
+
+.panel-thumbs li div p {
+  font-size:11px;
+  line-height:16px;
+  font-style:italic;
+}
+
+.panel-thumbs li img{
+  max-width: 190px;
+  border:3px solid white;
+  cursor:pointer;
+  position:relative;
+  -moz-box-shadow:1px 1px 1px #aaa;
+  -webkit-box-shadow:1px 1px 1px #aaa;
+  box-shadow:1px 1px 1px #aaa;
+}
+
+.panel-thumbs li img:hover{
+  -moz-box-shadow:1px 1px 7px #777;
+  -webkit-box-shadow:1px 1px 7px #777;
+  box-shadow:1px 1px 7px #777;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.bar {
+  background: rgba(255,255,255,0.8);
+  color: #404040;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-family: BebasNeueRegular;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.bio {
+  background:url('../images/biography.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  background-size:cover;
+
+  h1.title {
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    bottom: 50px;
+    right: 20px;
+    text-transform: capitalize;
+  }
+
+  .text-block {
+    float: right;
+    max-width: 550px;
+    margin-right: 50px;
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+    line-height: 28px;
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}

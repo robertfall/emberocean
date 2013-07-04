@@ -1,0 +1,39 @@
+html
+  head
+    meta charset="utf-8"
+    title Blue Ember Art Studios
+    link rel="stylesheet" href="/stylesheets/stylesheet.css"
+    script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    script type="text/javascript" src="scripts/jquery.masonry.min.js"
+    meta name="generator" content="nanoc #{Nanoc::VERSION}"
+    link rel="shortcut icon" href="favicon.ico"
+  body
+    nav
+      ul.main-nav
+        li
+          a href='#home' Home
+        li
+          a href='#' Biography
+        li
+          a href='#art' Art
+        li
+          a class='selected' href='#' School
+        li
+          a href='#' Furniture
+        li
+          a href='#' Marketing
+        li
+          a href='#renovations' Renovations
+        li
+          a href='#' T-Shirts
+        li
+          a href='#' News
+        li
+          a href='#' Contact
+    #home.main-bg
+    .main-wrapper
+      == yield
+    .bar
+      .contact-details
+        span Contact Details: test@test.com - 074 400 1018
+
