@@ -10,6 +10,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SpongeFont';
+  src: url('../fonts/spongefont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .main-nav {
   list-style: none;
   position: fixed;
@@ -37,8 +44,12 @@
   -webkit-transition: all 0.1s;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 24px
-}
+  font-size: 24px;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.6),
+    1px -1px 0 rgba(0,0,0,0.6),
+    -1px 1px 0 rgba(0,0,0,0.6),
+    1px 1px 0 rgba(0,0,0,0.6);
+  }
 
 .main-nav a:hover {
   background: rgba(200,200,200,0.8);
@@ -47,7 +58,7 @@
 .main-nav a.selected {
   color: white;
   text-shadow: none;
-  border-right: 3px solid #AAA;
+  background: rgba(64,64,64,0.6);
 }
 
 .main-bg {
@@ -73,7 +84,7 @@
   background: rgba(0,0,0,0.6);
   padding: 10px;
   box-sizing: border-box;
-  padding-left: 160px;
+  padding-left: 220px;
   border-right: 5px solid black;
   -moz-transition: all 1s;
   -o-transition: all 1s;
@@ -177,14 +188,40 @@
 .bar {
   background: rgba(255,255,255,0.8);
   color: #404040;
-  height: 30px;
+  height: 50px;
   width: 100%;
   position: absolute;
-  bottom: 0;
-  text-align: center;
+  bottom: 40px;
+  text-align: right;
   font-family: BebasNeueRegular;
   font-size: 20px;
   line-height: 30px;
+
+  .slogan {
+    font-family: "SpongeFont", "BebasNeueRegular";
+    vertical-align: top;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+
+  .name {
+    font-family: "Comic Sans MS", "Chalkboard", sans-serif;
+    text-transform: uppercase;
+    line-height: 48px;
+    font-weight: 600;
+    font-size: 42px;
+    margin: 0px 30px;
+  }
+}
+
+.designedby {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding: 5px 8px;
+  font-family: sans-serif;
 }
 
 .school {
@@ -205,7 +242,7 @@
     }
     .title {
       font-family: "Comic Sans MS", "Chalkboard", sans-serif;
-      font-size: 95px;
+      font-size: 78px;
     }
 
     .subtitle {
@@ -214,7 +251,7 @@
     }
 
     .description {
-      font-size: 28px;
+      font-size: 22px;
     }
   }
   .seperator {
@@ -241,7 +278,7 @@
     -webkit-background-size: cover;
     background-size:cover;
     width: 100%;
-    margin-left: -160px
+    margin-left: -220px
   }
 }
 
@@ -271,11 +308,12 @@
 
   .blurb {
     font-size: 29px;
+    margin-left: -147px;
   }
 
   .details {
     font-size: 32px;
-    margin-left: -60px;
+    margin-left: -147px;
   }
 }
 .bio {
@@ -294,7 +332,7 @@
 
   .text-block {
     float: right;
-    max-width: 550px;
+    max-width: 800px;
     margin-right: 50px;
     color: white;
     font-size: 22px;
